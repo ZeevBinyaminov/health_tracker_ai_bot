@@ -1,5 +1,5 @@
 aiohttp
-aiogram=3.*
+aiogram==3.*
 python-dotenv
 sqlalchemy[asyncio]
 pydantic
