@@ -43,14 +43,6 @@ POSTGRES_DB=health_tracker
 
 `DATABASE_URL` собирается внутри приложения из этих параметров.
 
-## Запуск локально
-```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python bot.py
-```
-
 
 ## Запуск через Docker
 ```
