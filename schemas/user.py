@@ -1,6 +1,6 @@
-from datetime import date
+from datetime import date as dt_date
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class UserSchema(BaseModel):
@@ -21,8 +21,8 @@ class NormsSchema(BaseModel):
     water_norm: int
 
 
-class Statistics(BaseModel):
-    user_id: int
-    kcal_change: int
+class StatisticsSchema(BaseModel):
+    telegram_id: int
+    amount: int
     action: str
-    date: date
+    date: dt_date = Field(default_factory=dt_date.today)

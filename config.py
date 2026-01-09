@@ -7,7 +7,10 @@ from dotenv import load_dotenv
 logging.basicConfig(level=logging.DEBUG)
 
 aiohttp_logger = logging.getLogger("aiohttp")
-aiohttp_logger.setLevel(logging.DEBUG)
+aiohttp_logger.setLevel(logging.INFO)
+
+matplotlib_logger = logging.getLogger("matplotlib")
+matplotlib_logger.setLevel(logging.INFO)
 
 load_dotenv()
 

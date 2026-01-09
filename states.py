@@ -16,3 +16,12 @@ class FoodForm(StatesGroup):
     food_name = State()
     food_choice = State()
     amount = State()
+
+
+class WaterForm(StatesGroup):
+    amount = State()
+
+
+class WorkoutForm(StatesGroup):
+    workout_choice = State()
+    duration = State()
