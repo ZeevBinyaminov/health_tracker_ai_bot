@@ -156,7 +156,8 @@ async def process_day_activity(message: Message, state: FSMContext):
         await message.answer("Пожалуйста, введите корректное значение дневной активности (кол-во минут).")
         return
     await state.update_data(day_activity=int(day_activity))
-    await message.answer("Какова ваша норма калорий в день?")
+    await message.answer("Какова ваша норма калорий в день?\n"
+                         "Введите 0, если хотите, чтобы я ее расчитал для Вас с учетом Вашей активности.")
     await state.set_state(ProfileForm.kcal_norm)
 
 

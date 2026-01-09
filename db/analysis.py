@@ -53,10 +53,11 @@ def build_kcal_plot(stats: List[Dict]) -> bytes:
     fig, ax = plt.subplots(figsize=(6, 3.5), dpi=150)
     ax.plot(labels, kcal, marker="o", color="#e76f51", linewidth=2)
     ax.fill_between(labels, kcal, alpha=0.15, color="#e76f51")
-    ax.set_title("Прием калорий (последние 7 дней)")
+    ax.set_title("Потребление калорий (последние 7 дней)")
     ax.set_ylabel("ккал")
     ax.grid(axis="y", alpha=0.3)
     ax.tick_params(axis='x', labelrotation=45)
+
     ax.set_axisbelow(True)
     fig.tight_layout()
     return _render_plot(fig)
